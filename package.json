@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "keywords": [
+    "textlintrule"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "test": "textlint-scripts test",
+    "build": "textlint-scripts build",
+    "prepublish": "npm run --if-present build"
+  },
+  "devDependencies": {
+    "textlint-scripts": "^1.4.2"
+  }
+}
