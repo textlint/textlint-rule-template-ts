@@ -2,6 +2,8 @@
 
 This is TEMPLATE REPOSITORY for creating textlint rule.
 
+TypeScript version of <https://github.com/textlint/textlint-rule-template>
+
 ## Install
 
 Requirement:
@@ -9,11 +11,17 @@ Requirement:
 - Git
 - Node.js
 
-Run following steps:
+Use [create-textlint-rule](https://github.com/textlint/create-textlint-rule):
+
+```
+$ npx create-textlint-rule example --typescript
+```
+
+Or, Run following steps manually:
 
 ```sh
-ruleName="textlint-rule-<rule-name>"
-git clone --depth=1 https://github.com/textlint/textlint-rule-template.git ${ruleName}
+ruleName="textlint-rule-example"
+git clone --depth=1 https://github.com/textlint/textlint-rule-template-ts.git ${ruleName}
 cd ${ruleName}
 # Initialize git
 rm -rf .git/

@@ -1,13 +1,17 @@
-"use strict";
-const TextLintTester = require("textlint-tester");
+import TextLintTester from "textlint-tester";
+import rule from "../src/index";
 const tester = new TextLintTester();
-// rule
-const rule = require("../src/index");
 // ruleName, rule, { valid, invalid }
 tester.run("rule", rule, {
     valid: [
         // no problem
-        "text"
+        "text",
+        {
+            text: "It is bugs, but it should be ignored",
+            options: {
+                allows: ["it should be ignored"]
+            }
+        }
     ],
     invalid: [
         // single match

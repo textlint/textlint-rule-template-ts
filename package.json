@@ -11,9 +11,15 @@
   "scripts": {
     "test": "textlint-scripts test",
     "build": "textlint-scripts build",
-    "prepublish": "npm run --if-present build"
+    "prepublish": "npm run --if-present build",
+    "watch": "textlint-scripts build --watch"
   },
   "devDependencies": {
-    "textlint-scripts": "^2.1.0"
+    "@textlint/types": "^1.2.2",
+    "@types/node": "^12.11.1",
+    "textlint-scripts": "^3.0.0",
+    "textlint-tester": "^5.1.10",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
   }
 }
