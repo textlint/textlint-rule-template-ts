@@ -1,11 +1,11 @@
 import { TextlintRuleModule } from "@textlint/types";
 
-export interface ruleOptions {
+export interface Options {
     // if the Str includes `allows` word, does not report it
     allows?: string[];
 }
 
-const report: TextlintRuleModule<ruleOptions> = (context, options = {}) => {
+const report: TextlintRuleModule<Options> = (context, options = {}) => {
     const {Syntax, RuleError, report, getSource} = context;
     const allows = options.allows || [];
     return {
