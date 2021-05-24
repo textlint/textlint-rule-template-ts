@@ -6,7 +6,7 @@ TypeScript version of <https://github.com/textlint/textlint-rule-template>
 
 ## Install
 
-Requirement:
+Requirements:
 
 - Git
 - Node.js
@@ -63,6 +63,6 @@ Publish your rule to [npm](https://www.npmjs.com/).
 
 ## How to write textlint rule?
 
-See documents.
+See documentation.
 
-- [textlint/rule.md at master · textlint/textlint](https://github.com/textlint/textlint/blob/master/docs/rule.md "textlint/rule.md at master · textlint/textlint")
+- [Creating Rules · textlint](https://textlint.github.io/docs/rule.html)
