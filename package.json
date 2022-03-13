@@ -19,7 +19,7 @@
     "@types/node": "^15.6.0",
     "textlint-scripts": "^12.1.1",
     "textlint-tester": "^12.1.1",
-    "ts-node": "^10.4.0",
+    "ts-node": "^10.7.0",
     "typescript": "^4.2.4"
   }
 }
