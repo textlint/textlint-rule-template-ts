@@ -1,30 +1,30 @@
 import { TextlintRuleModule } from "@textlint/types";
 
 export interface Options {
-    // if the Str includes `allows` word, does not report it
+    // If node's text includes allowed text, does not report.
     allows?: string[];
 }
 
 const report: TextlintRuleModule<Options> = (context, options = {}) => {
-    const {Syntax, RuleError, report, getSource} = context;
-    const allows = options.allows || [];
+    const { Syntax, RuleError, report, getSource, locator } = context;
+    const allows = options.allows ?? [];
     return {
         [Syntax.Str](node) { // "Str" node
             const text = getSource(node); // Get text
-            const matches = /bugs/g.exec(text); // Found "bugs"
-            if (!matches) {
+            if (allows.some(allow => text.includes(allow))) {
                 return;
             }
-            const isIgnored = allows.some(allow => text.includes(allow));
-            if (isIgnored) {
-                return;
+            const matches = text.matchAll(/bugs/g);
+            for (const match of matches) {
+                const index = match.index ?? 0;
+                const matchRange = [index, index + match[0].length] as const;
+                const ruleError = new RuleError("Found bugs.", {
+                    padding: locator.range(matchRange)
+                });
+                report(node, ruleError);
             }
-            const indexOfBugs = matches.index;
-            const ruleError = new RuleError("Found bugs.", {
-                index: indexOfBugs // padding of index
-            });
-            report(node, ruleError);
         }
     }
 };
+
 export default report;
