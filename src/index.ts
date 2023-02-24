@@ -1,4 +1,4 @@
-import { TextlintRuleModule } from "@textlint/types";
+import type { TextlintRuleModule } from "@textlint/types";
 
 export interface Options {
     // If node's text includes allowed text, does not report.
