@@ -15,7 +15,7 @@
     "watch": "textlint-scripts build --watch"
   },
   "devDependencies": {
-    "@textlint/types": "^13.4.1",
+    "@textlint/types": "^14.0.0",
     "@types/node": "^18.19.10",
     "textlint-scripts": "^13.4.1",
     "textlint-tester": "^13.4.1",
