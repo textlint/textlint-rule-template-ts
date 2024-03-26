@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@textlint/types": "^14.0.4",
-    "@types/node": "^20.11.29",
+    "@types/node": "^20.11.30",
     "textlint-scripts": "^14.0.4",
     "textlint-tester": "^14.0.4",
     "ts-node": "^10.9.2",
