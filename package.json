@@ -18,7 +18,7 @@
     "@textlint/types": "^15.0.0",
     "@types/node": "^20.19.0",
     "textlint-scripts": "^15.0.0",
-    "textlint-tester": "^14.8.4",
+    "textlint-tester": "^15.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
