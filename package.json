@@ -15,10 +15,10 @@
     "watch": "textlint-scripts build --watch"
   },
   "devDependencies": {
-    "@textlint/types": "^15.2.0",
+    "@textlint/types": "^15.2.1",
     "@types/node": "^20.19.9",
-    "textlint-scripts": "^15.2.0",
-    "textlint-tester": "^15.2.0",
+    "textlint-scripts": "^15.2.1",
+    "textlint-tester": "^15.2.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
